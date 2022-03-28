@@ -3,21 +3,22 @@ package validParentheses;
 import java.util.Stack;
 
 public class Solution {
+//    link: https://leetcode.com/problems/valid-parentheses
     public boolean isValid(String s) {
-        Stack<Character> characterStack = new Stack<>();
+        Stack<Character> stack = new Stack<>();
         for(int i = 0; i < s.length(); i++) {
-            if(s.charAt(i) == '(' || s.charAt(i) == '[' || s.charAt(i) == '{') {
-                characterStack.push(s.charAt(i));
-            } else if(s.charAt(i) == ')' || s.charAt(i) == ']' || s.charAt(i) == '}') {
-                if(characterStack.empty())
+            if(s.charAt(i) == '[' || s.charAt(i) == '(' || s.charAt(i) == '{') {
+                stack.push(s.charAt(i));
+            } else if(s.charAt(i) == ']' || s.charAt(i) == ')' || s.charAt(i) == '}') {
+                if(stack.empty())
                     return false;
-                Character topChar = characterStack.pop();
-                if(s.charAt(i) == ']' && topChar != '['
-                || s.charAt(i) == ')' && topChar != '('
-                || s.charAt(i) == '}' && topChar != '{')
+
+                if(s.charAt(i) == ']' && stack.pop() != '['
+                || s.charAt(i) == ')' && stack.pop() != '('
+                || s.charAt(i) == '}' && stack.pop() != '{')
                     return false;
             }
         }
-        return characterStack.empty();
+        return stack.empty();
     }
 }

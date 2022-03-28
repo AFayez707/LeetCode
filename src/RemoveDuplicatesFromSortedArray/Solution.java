@@ -1,19 +1,15 @@
 package RemoveDuplicatesFromSortedArray;
 
 public class Solution {
+//  link: https://leetcode.com/problems/remove-element/solution/
     public int removeDuplicates(int[] nums) {
-        if(nums == null || nums.length == 0)
-            return 0;
-
         int leftPointer = 0, rightPointer = 1;
-
         while(rightPointer < nums.length) {
             if(nums[leftPointer] != nums[rightPointer]) {
                 nums[++leftPointer] = nums[rightPointer];
             }
             rightPointer++;
         }
-
-        return leftPointer + 1;
+        return leftPointer;
     }
 }
