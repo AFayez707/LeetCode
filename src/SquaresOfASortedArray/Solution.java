@@ -3,24 +3,19 @@ package SquaresOfASortedArray;
 import java.util.Arrays;
 
 class Solution {
+    // link: https://leetcode.com/problems/squares-of-a-sorted-array/
     public int[] sortedSquares(int[] nums) {
-//        int[] squaredArray = new int[nums.length];
-//        for(int currentIndex = 0; currentIndex < nums.length; currentIndex++) {
-//            squaredArray[currentIndex] = nums[currentIndex] * nums[currentIndex];
-//        }
-//        Arrays.sort(squaredArray);
-//        return squaredArray;
-
         int[] squaredArray = new int[nums.length];
+
         int leftPointer = 0, rightPointer = nums.length - 1;
-        for(int currentIndex = nums.length - 1; currentIndex >= 0; currentIndex--) {
-            int leftSquare = nums[leftPointer]*nums[leftPointer];
-            int rightSquare = nums[rightPointer]*nums[rightPointer];
-            if(leftSquare > rightSquare) {
-                squaredArray[currentIndex] = leftSquare;
+        for (int currentIndex = nums.length - 1; currentIndex >= 0; currentIndex--) {
+            int leftSquared = nums[leftPointer] * nums[leftPointer];
+            int rightSquared = nums[rightPointer] * nums[rightPointer];
+            if (leftSquared > rightSquared) {
+                squaredArray[currentIndex] = leftSquared;
                 leftPointer++;
             } else {
-                squaredArray[currentIndex] = rightSquare;
+                squaredArray[currentIndex] = rightSquared;
                 rightPointer--;
             }
         }
