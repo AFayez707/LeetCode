@@ -1,9 +1,15 @@
 package Amazon.Linked_List.Add_Two_Numbers;
 
-// Link: https://leetcode.com/problems/add-two-numbers/
-// Time: O(Max(M, N))
-// Space: O(Max(M, N))
 public class Solution {
+    // Link: https://leetcode.com/problems/add-two-numbers/
+    // Time: O(Max(M, N))
+    // Space: O(Max(M, N))
+
+    // IMPORTANT
+    // The numbers are stores in the same order
+    // 2 -> 4 -> 3
+    // 5 -> 6 -> 4
+    // Result: 7 -> 0 -> 8
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         // The actual results starts a node next to this one.
         ListNode head = new ListNode(0);

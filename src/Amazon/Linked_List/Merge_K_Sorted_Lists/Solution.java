@@ -1,12 +1,10 @@
 package Amazon.Linked_List.Merge_K_Sorted_Lists;
 
-// Link: https://leetcode.com/problems/merge-k-sorted-lists/
-// Time: O(N*K) K = Number of Lists, N = Size of List
-// Space: O(1)
-
-// NOTE: THERE'S ANOTHER APPROACH DOWN, WITH THE USAGE OF PRIORITY QUEUE
-
 public class Solution {
+    // Link: https://leetcode.com/problems/merge-k-sorted-lists/
+    // Time: O(N*K) K = Number of Lists, N = Size of Lis,Ut
+    // Space: O(1)
+    // NOTE: THERE'S ANOTHER APPROACH DOWN, WITH THE USAGE OF PRIORITY QUEUE WHICH IS BETTER IN TIME COMPLEXITY
     public ListNode mergeKLists(ListNode[] lists) {
         if(lists == null || lists.length == 0)
             return null;
