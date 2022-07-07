@@ -1,6 +1,7 @@
 package Amazon.Arrays_and_Strings.Implement_strStr;
 
 public class Solution {
+    // Link: https://leetcode.com/problems/implement-strstr/
     public int strStr(String haystack, String needle) {
         if(needle == null || needle.length() == 0)
             return 0;

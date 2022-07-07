@@ -1,8 +1,8 @@
 package Amazon.Sorting_and_Searching.Search_in_Rotated_Sorted_Array;
 
 // Link: https://leetcode.com/problems/search-in-rotated-sorted-array/
-// Time:
-// Space:
+// Time: O(Log(N))
+// Space: O(1)
 public class Solution {
     public int search(int[] nums, int target) {
         int leftPointer = 0;
